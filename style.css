@@ -1,3 +1,9 @@
+/*Definicion de las fuentes de las letras*/
+@font-face {
+    font-family: 'mhFont';
+    src: url(fuentes/monsterhunter.ttf) format('truetype');
+}
+
 *{
     margin: 0;
     padding: 0;
@@ -24,5 +30,44 @@ nav{
 
 /*Se configura el tamaño de la imagen de logo*/
 nav img{
-    width: 150px;
+    width: 125px;
+}
+
+.divNavLinks{
+    flex: 1;
+    text-align: right;
+}
+
+/*Se seleccionan cada uno de los elementos li de la lista ul*/
+.divNavLinks ul li{
+    list-style: none;
+    /*Se muestra toda la información en una sola linea*/
+    display: inline-block;
+    padding: 8px 12px;
+    position: relative;
+}
+
+/*Se añade el estilo para cada uno de los links*/
+.divNavLinks ul li a{
+    /*Se elimina cualquier tipo de decoracion por defecto del texto*/
+    text-decoration: none;
+    color: #fff;
+    font-size: 20px;
+    /*Cambiar la fuente al estilo de Monster Hunter*/
+    font-family: 'mhFont', sans-serif;
+}
+
+/*Código par mostrar una linea que subraya cada parte del nav, pero no se mostrará en pantalla*/
+.divNavLinks ul li::after{
+    content: '';
+    width: 0%;
+    height: 2px;
+    background: #f44336;
+    display: block;
+    margin: auto;
+}
+
+/*Las lineas que subrayan se mostrarán una vez que el*/
+.divNavLinks ul li:hover::after{
+    width: 100%;
 }
