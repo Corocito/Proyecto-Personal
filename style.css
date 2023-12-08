@@ -4,6 +4,17 @@
     src: url(fuentes/monsterhunter.ttf) format('truetype');
 }
 
+/*Fuente de letra para los textos de la página*/
+@font-face {
+    font-family: 'mhFont2';
+    src: url(fuentes/monsterhuntersuperital.ttf) format('truetype');
+}
+
+@font-face {
+    font-family:'mhFont3';
+    src: url(fuentes/monsterhunterexpand.ttf) format('truetype');
+}
+
 *{
     margin: 0;
     padding: 0;
@@ -65,9 +76,26 @@ nav img{
     background: #f44336;
     display: block;
     margin: auto;
+    transition: 0.2s;
 }
 
 /*Las lineas que subrayan se mostrarán una vez que el*/
 .divNavLinks ul li:hover::after{
     width: 100%;
+}
+
+.divTextInfo{
+    width: 100%;
+    color: #fff;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%,-50%);
+    text-align: center;
+    font-family: 'mhFont2', sans-serif;
+    font-size: 30px;
+}
+
+.divTextInfo h1{
+    font-family: 'mhFont3';
 }
