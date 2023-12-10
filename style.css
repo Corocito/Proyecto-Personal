@@ -15,6 +15,17 @@
     src: url(fuentes/monsterhunterexpand.ttf) format('truetype');
 }
 
+@font-face {
+    font-family: 'mhRiseFont';
+    src: url(fuentes/monsterHunterRiseFont.otf);
+}
+
+@font-face{
+ font-family: 'mhFontSemiItal';
+ src: url(fuentes/monsterhuntersemital.ttf) format('truetype');
+}
+
+/*Diseño de la página*/
 *{
     margin: 0;
     padding: 0;
@@ -76,7 +87,7 @@ nav img{
     background: #f44336;
     display: block;
     margin: auto;
-    transition: 0.2s;
+    transition: 0.25s;
 }
 
 /*Las lineas que subrayan se mostrarán una vez que el*/
@@ -97,5 +108,81 @@ nav img{
 }
 
 .divTextInfo h1{
-    font-family: 'mhFont3';
+    font-family: 'mhFont3', sans-serif;
+}
+
+/*Ocultar los iconos con la pantalla completa*/
+nav svg{
+    display: none;
+}
+
+
+/*Agregar las funciones para que sea responsive*/
+@media (max-width: 700px) {
+    .divTextInfo h1{
+        font-size: 35px;
+        /*sirve para dividir la frase si no hay suficiente espacio*/
+        word-wrap: break-word;
+    }
+
+    .divTextInfo p{
+        font-size: 20px;
+        word-wrap: break-word;
+    }
+    
+    .divNavLinks ul li a{
+        font-size: 15px;
+    }
+
+    .divNavLinks ul li{
+        /*Alinea todos los elementos en una linea*/
+        display: block;
+    }
+
+    .divNavLinks{
+        /*Posicion por encima de todos los elementos de la pantalla*/
+        position: absolute;
+        /*100vh significa la totalidad de la pantalla*/
+        height: 100vh;
+        width: 200px;
+        top: 0;
+        right: -200px;
+        text-align: left;
+        z-index: 2;
+        background: #655d5d;
+        transition: 1s;
+    }
+
+    nav svg{
+        display: block;
+        color: #fff;
+        margin: 10px;
+        cursor: pointer;
+        
+    }
+
+    .divNavLinks ul{
+        padding: 30px;
+    }
+}
+
+/*Diseño de las secciones de la página*/
+
+.divisiones{
+    /*El wigth sirve para definir que tanto se distribuirá el texto en la seccion de la página*/
+    width: 90%;
+    /*Se le da un margen automatico para que se ajuste solo cuando cambie el tamaño de la página*/
+    margin: auto;
+    text-align: center;
+    /*Se le da una padding top para separarlo del header*/
+    padding-top: 100px;
+}
+
+.divisiones h1{
+    font-family: 'mhFontSemiItal', sans-serif;
+    font-size: 30px;
+}
+
+.divisiones p{
+    font-family: 'mhRiseFont', sans-serif;
 }
