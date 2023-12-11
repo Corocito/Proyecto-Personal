@@ -25,6 +25,16 @@
  src: url(fuentes/monsterhuntersemital.ttf) format('truetype');
 }
 
+@font-face {
+    font-family: 'mhFontTitles';
+    src: url(fuentes/monsterhunter3d.ttf) format('truetype');
+}
+
+@font-face {
+    font-family: 'mhFontTitles2';
+    src: url(fuentes/monsterhuntercond.ttf) format('truetype');
+}
+
 /*Diseño de la página*/
 *{
     margin: 0;
@@ -53,6 +63,7 @@ nav{
 /*Se configura el tamaño de la imagen de logo*/
 nav img{
     width: 125px;
+    fill: #fff;
 }
 
 .divNavLinks{
@@ -116,6 +127,73 @@ nav svg{
     display: none;
 }
 
+.icono{
+    fill: #fff;
+}
+/*Diseño de las secciones de la página*/
+
+.divisiones{
+    /*El width sirve para definir que tanto se distribuirá el texto en la seccion de la página*/
+    
+    /*Se le da un margen automatico para que se ajuste solo cuando cambie el tamaño de la página*/
+    margin: auto;
+    text-align: center;
+    /*Se le da una padding top para separarlo del header*/
+    padding-top: 100px;
+    padding-bottom: 50px;
+    background: #0f0e1f;
+}
+/*0f0e1f*/
+.divisiones h1{
+    font-family: 'mhFontSemiItal', sans-serif;
+    font-size: 35px;
+    color: #fff;
+    padding-bottom: 5%;
+}
+
+.divisiones p {
+    font-family: 'mhRiseFont', sans-serif;
+    color: #fff;
+}
+
+.textDivisionesInicio{
+    padding-bottom: 50px;
+}
+
+.divisiones h3{
+    font-family: 'mhFontTitles', sans-serif;
+    font-size: 25px;
+    color: #fff;
+    text-align: center;
+}
+
+/*Alinear la información de cada columna*/
+.columnas{
+    display: flex;
+    justify-content: space-between;
+    /*El padding en 25px es para darle una separación a las columnas con la margen de la pantalla*/
+    padding: 2px 25px;
+}
+
+.columnas p{
+    font-size: 14px;
+}
+
+.columna{
+    background: #655d5d;
+    border-radius: 10px;
+    
+    padding: 5px 5px;
+    box-sizing: border-box;
+    flex-basis: 23%;
+    transition: 0.5;
+    cursor: pointer;
+}
+
+/*Animación para cada columna*/
+.columna:hover{
+    box-shadow: 0 0 50px 0px rgba(255, 255, 255, 0.5);
+}
 
 /*Agregar las funciones para que sea responsive*/
 @media (max-width: 700px) {
@@ -158,31 +236,47 @@ nav svg{
         color: #fff;
         margin: 10px;
         cursor: pointer;
-        
     }
 
     .divNavLinks ul{
         padding: 30px;
     }
+
+    .columnas{
+        flex-direction: column;
+    }
+    .columna{
+        margin-top: 30px;
+        
+    }
 }
 
-/*Diseño de las secciones de la página*/
-
-.divisiones{
-    /*El wigth sirve para definir que tanto se distribuirá el texto en la seccion de la página*/
-    width: 90%;
-    /*Se le da un margen automatico para que se ajuste solo cuando cambie el tamaño de la página*/
-    margin: auto;
+.divFooter{
+    background-color: #0f0e1f;
     text-align: center;
-    /*Se le da una padding top para separarlo del header*/
-    padding-top: 100px;
+    color: #ffffffb5;
 }
 
-.divisiones h1{
-    font-family: 'mhFontSemiItal', sans-serif;
-    font-size: 30px;
+#divMonstruos img{
+    margin-top: 20px;
+    width: 150px;
+    height: 150px;
 }
 
-.divisiones p{
-    font-family: 'mhRiseFont', sans-serif;
+#divArmas img{
+    margin-top: 20px;
+    width: 150px;
+    height: 150px;
+}
+
+#divArmaduras img{
+    margin-top: 20px;
+    width: 150px;
+    height: 150px;
+}
+
+#divMapas img{
+    margin-top: 20px;
+    width: 150px;
+    height: 150px;
 }
