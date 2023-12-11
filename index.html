@@ -8,6 +8,7 @@
     <meta name="author" content="Samuel Orozco Mondragón">
     <!--Enlace con el archivo de estilo-->
     <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@6.4.2/css/fontawesome.min.css">
 </head>
 <body>
     
@@ -16,10 +17,16 @@
         <!--Se agrega la barra de navegacion o "nav"-->
         <nav>
             <!--Creacion de un logo para volver a la pagina principal-->
-           <a href="index.html"><img src="imagenes/logo2.svg"></a> 
+           <a href="index.html" class="icono"><img src="imagenes/logo2.svg"></a> 
 
            <!--Se crea el div para los botones del nav-->
-           <div class="divNavLinks">
+           <div class="divNavLinks" id="navLinks">
+            <!--Link para el icono de cerrar-->
+            <!--Iconos sacados de bootstrap-->
+            <!--Para invocar bien las funciones JavaScript, los eventos en onclick deben de terminar con parentesis-->
+            <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" fill="currentColor" class="bi bi-x-square-fill" viewBox="0 0 16 16" onclick="hideMenu()">
+                <path d="M2 0a2 2 0 0 0-2 2v12a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V2a2 2 0 0 0-2-2zm3.354 4.646L8 7.293l2.646-2.647a.5.5 0 0 1 .708.708L8.707 8l2.647 2.646a.5.5 0 0 1-.708.708L8 8.707l-2.646 2.647a.5.5 0 0 1-.708-.708L7.293 8 4.646 5.354a.5.5 0 1 1 .708-.708"/>
+              </svg>
             <!--Cada uno de los vinculos a las secciones de la página-->
             <ul>
                 <li><a href="">INICIO</a></li>
@@ -29,15 +36,55 @@
                 <li><a href="">MAPAS</a></li>
             </ul>
            </div>
+           <!--Icono para el menú-->
+           <!--Iconos sacados de bootstrap-->
+           <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" fill="currentColor" class="bi bi-three-dots" viewBox="0 0 16 16" onclick="showMenu()">
+            <path d="M3 9.5a1.5 1.5 0 1 1 0-3 1.5 1.5 0 0 1 0 3m5 0a1.5 1.5 0 1 1 0-3 1.5 1.5 0 0 1 0 3m5 0a1.5 1.5 0 1 1 0-3 1.5 1.5 0 0 1 0 3"/>
+          </svg>
         </nav>
 
         <div class="divTextInfo">
             <h1>Monster Hunter DataBase</h1>
+            <br>
             <p>Recopilación de Información sobre la saga Monster Hunter</p>
         </div>
         
     </section>
+ 
+    <!--Se crea nueva section-->
+    <section class="divisiones">
+        <h1> Monster Hunter</h1>
+        <!--Cambiar por texto  correcto despues-->
+        <p class="textDivisionesInicio">Lorem ipsum dolor sit amet consectetur adipisicing elit. Ea consequuntur labore qui veritatis. Ullam, animi quisquam facilis aperiam illum magnam est! Nesciunt praesentium rem at excepturi consequuntur, distinctio omnis nostrum?</p>
 
+        <!--Se crea un div para manejar con mayor facilidad cada columna-->
+        <div class="columnas">
+            <!--Se crean las secciones-->
+            <div id="divMonstruos" class="columna">
+                <h3>Monstruos</h3>
+                <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Quod, odio quis voluptatum hic tenetur ducimus vel optio! Blanditiis laborum ullam ratione quidem, nam dolore asperiores aspernatur rerum. Non, vel natus!</p>
+                <img src="imagenes/MHW-Unknown_Monster_Icon.webp">
+            </div>
+
+            <div id="divArmas" class="columna">
+                <h3>Armas</h3>
+                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Odio temporibus ipsa est! Esse, perspiciatis! Nam laudantium aspernatur ullam perspiciatis quod, libero enim similique! Reiciendis ea id sunt asperiores aliquam numquam.</p>
+                <img src="imagenes/Sword_and_Shield_Icon_White.webp">
+            </div>
+
+            <div id="divArmaduras" class="columna">
+                <h3>Armaduras</h3>
+                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Sint ab odio culpa, vel, quos a, iure in eveniet ea veritatis molestias minima? Voluptas reprehenderit vero necessitatibus dicta nulla magnam quae.</p>
+                <img src="imagenes/Chest_Icon_White.webp">
+            </div>
+
+            <div id="divMapas" class="columna">
+                <h3>Mapas</h3>
+                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Dignissimos recusandae ratione harum ipsam cum architecto labore quasi eaque totam exercitationem culpa, quaerat ut fugit! Dignissimos accusamus ipsam ab atque ipsa!</p>
+                <img src="imagenes/Map_Icon_White.svg">
+            </div>
+        </div>
+    </section>
 
     <!--Se crea el pie de página-->
     <footer>
@@ -45,5 +92,11 @@
             <p>&copy; Samuel Orozco Mondragón</p>
         </div>
     </footer>
+
+    <!--Funciones para la página-->
+    <!--Enlace al archivo JavaScript-->
+    <!--defer funciona para que archivo JavaScript no se ejecute hasta el que se analice todo el HTML-->
+    <!--El script se define al final del body para que se ejecute solo cuando cargue todo el HTML-->
+    <script src="script.js" defer></script>
 </body>
 </html>
